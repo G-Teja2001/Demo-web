@@ -7,6 +7,9 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cors());
+app.use(cors({
+    origin: 'https://playful-scone-c1c8fa.netlify.app/' // Your Netlify URL
+}));
 app.use(express.static('.')); // Serve your HTML file
 
 // Create checkout session endpoint
